@@ -7,27 +7,27 @@
  * file that was distributed with this source code.
  */
 
-import Component, { ComponentAttrs } from 'flarum/common/Component'
-import { Data } from '../ProcessData'
+import Component, {ComponentAttrs} from 'flarum/common/Component'
+import {Data} from '../ProcessData'
 
 export interface GeoIpBarAttrs extends ComponentAttrs {
-  elements: Data
+    elements: Data
 }
 
 export default class GeoIpToolBar<
-  CustomAttrs extends GeoIpBarAttrs = GeoIpBarAttrs
+    CustomAttrs extends GeoIpBarAttrs = GeoIpBarAttrs
 > extends Component<CustomAttrs> {
-  view() {
-    const { elements } = this.attrs
-    return (
-      <div className='userIp-container'>
-        <div className='ip-locate' id='info-country'>
-          {`${elements["region"]}, ${elements["code"]}`}
-        </div>
-        <div className='ip-locate' id='info-isp'>
-          {`${elements["isp"]}`}
-        </div>
-      </div>
-    )
-  }
+    view() {
+        const {elements} = this.attrs
+        return (
+            <div className='userIp-container'>
+                <div className='ip-locate' id='info-city'>
+                    {`${elements["city"]}`}
+                </div>
+                <div className='ip-locate' id='info-country'>
+                    {`${elements["country"]}`}
+                </div>
+            </div>
+        )
+    }
 }

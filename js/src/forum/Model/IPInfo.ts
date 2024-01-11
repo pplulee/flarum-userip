@@ -11,7 +11,6 @@ import { NestedStringArray } from '@askvortsov/rich-icu-message-formatter'
 import Model from 'flarum/common/Model'
 
 export default class IPInfo extends Model {
-  countryCode = Model.attribute<NestedStringArray>('countryCode')
-  region = Model.attribute<NestedStringArray>('region')
-  isp = Model.attribute<NestedStringArray>('isp')
+  country = Model.attribute<NestedStringArray>('country')
+  city = Model.attribute<NestedStringArray>('city')
 }

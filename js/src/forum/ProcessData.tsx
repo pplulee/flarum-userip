@@ -11,9 +11,8 @@ import { NestedStringArray } from '@askvortsov/rich-icu-message-formatter'
 import ipinfo from './Model/IPInfo'
 
 export type Data = {
-  code: NestedStringArray
-  region: NestedStringArray
-  isp: NestedStringArray
+  country: NestedStringArray
+  city: NestedStringArray
 } & Record<string, NestedStringArray>
 
 export default class ProcessData {
@@ -21,9 +20,8 @@ export default class ProcessData {
 
   constructor(ipInfo: ipinfo) {
     this.data = {
-      region: ipInfo.region(),
-      code: ipInfo.countryCode(),
-      isp: ipInfo.isp()
+      country: ipInfo.country(),
+      city: ipInfo.city(),
     }
   }
 
