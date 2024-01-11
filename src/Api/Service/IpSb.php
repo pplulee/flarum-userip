@@ -44,9 +44,8 @@ class IpSb implements GeoIpInterface
         $body = json_decode($res->getBody());
 
         return (new ServiceResponse())
-            ->setCountryCode($body->country_code)
-            ->setRegion($body->region)
-            ->setIsp($body->isp)
+            ->setCountry($body->country)
+            ->setCity($body->city)
             ->setAddress($ip);
     }
 }

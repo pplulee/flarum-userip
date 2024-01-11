@@ -15,11 +15,8 @@ return [
     'up' => function (Builder $schema) {
         $schema->create('userip_info', function (Blueprint $table) {
             $table->string('address')->unique();
-
-            $table->string('country_code')->nullable();
-            $table->string('region')->nullable();
-
-            $table->string('isp')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
         });
     },
     'down' => function (Builder $schema) {

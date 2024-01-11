@@ -25,9 +25,8 @@ class IpInfoSerializer extends AbstractSerializer
     protected function getDefaultAttributes($model): array
     {
         return [
-            'countryCode'       => $model->country_code,
-            'region'            => $model->region,
-            'isp'               => $model->isp,
+            'country'       => $model->country,
+            'city'            => $model->city,
         ];
     }
 

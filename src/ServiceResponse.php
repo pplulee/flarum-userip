@@ -25,6 +25,10 @@ class ServiceResponse implements \JsonSerializable
     private ?string $region;
 
     private ?string $address;
+    
+    private ?string $country;
+    
+    private ?string $city;
 
     public function setCountryCode(?string $country_code): static
     {
@@ -50,6 +54,20 @@ class ServiceResponse implements \JsonSerializable
     public function setIsp(?string $isp): static
     {
         $this->isp = $isp;
+
+        return $this;
+    }
+    
+    public function setCountry(?string $country): static
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+    
+    public function setCity(?string $city): static
+    {
+        $this->city = $city;
 
         return $this;
     }

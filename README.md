@@ -1,24 +1,17 @@
-# User IP
-
-![extiverse](https://extiverse.com/extension/gbcl/userip/open-graph-image)
-
-> Display the IP address of the posting below the post
-
-## ScreenShot
-
-![ss](https://raw.githubusercontent.com/GBCLStudio/userip/main/screenshot.png)
+# User IP Location for Flarum
+only display city and country, modified by pplulee
 
 ## Install
 
 ```sh
-composer require gbcl/userip:"*"
+composer require pplulee/flarum-userip:"*"
 php flarum migrate
 ```
 
 ## Update
 
 ```sh
-composer update gbcl/userip:"*"
+composer update pplulee/flarum-userip:"*"
 php flarum cache:clear
 php flarum migrate
 ```
@@ -26,7 +19,7 @@ php flarum migrate
 ## Remove
 
 ```sh
-composer remove gbcl/userip
+composer remove pplulee/flarum-userip
 php flarum cache:clear
 ```
 
@@ -44,7 +37,7 @@ You just need to open the plugin in the background. :)
 
 You can easily extend this extension to support different API providers, if you follow these steps:
 
-- In your new extension, require `gbcl/userip` as a dependency
+- In your new extension, require `pplulee/flarum-userip` as a dependency
 - Define a new Service that implements `GBCLStudio\GeoIp\Api\GeoIpInterface`
 - In your new extension's extend.php, register the service: `new GBCLStudio\GeoIp\Extend\ApiProvider(MyNewService::class);`
 - Provide the required translations under the `gbcl-userip` namespace, for example: `gbcl-userip.admin.service.YOUR_NEW_EXTENSION.label`, specific translations The text can be found at [here](https://github.com/GBCLStudio/userip/blob/502fcd12dca2a07c29fc5b008026fb5b615dc246/resources/locale/en.yml#L9)

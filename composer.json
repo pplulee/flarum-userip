@@ -1,16 +1,12 @@
 {
-    "name": "gbcl/userip",
-    "description": "Geolocation for Flarum",
+    "name": "pplulee/flarum-userip",
+    "description": "Geolocation for Flarum, modified by @pplulee",
     "keywords": [
         "flarum",
         "geoip"
     ],
     "type": "flarum-extension",
     "license": "MIT",
-    "support": {
-        "issues": "https://github.com/GBCLStudio/userip/issues",
-        "source": "https://github.com/GBCLStudio/userip"
-    },
     "require": {
         "flarum/core": "^1.7.0",
         "guzzlehttp/guzzle": "^6.0 || ^7.0",
